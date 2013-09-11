@@ -245,7 +245,7 @@ function noError() {
 
 ### Variables
 
-Variable declarations should occur where needed. It is not necessary to have all variable declarations at the top of each function. Be aware of [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Scope_Cheatsheet), but do not go overboard and declare every single locally scoped variable at the top of a function. A good example of when not to do declare a variable at the top of a function is when defining `for` loops.
+Variable declarations should occur where needed. It is not necessary to have all variable declarations at the top of each function. Be aware of [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Scope_Cheatsheet), but do not go overboard and declare every single locally scoped variable at the top of a function. A good example of when not to declare a variable at the top of a function is when defining `for` loops.
 
 ```js
 // bad
@@ -286,7 +286,7 @@ function test() {
 ```
 
 ### Strings
-Never mix single and double quotes in the same file when defining String literals. Prefer single over double quotes for String literals. Never use a slash to create a new line in a string, because this will result in a SyntaxError if there are any whitespace characters after the slash.
+Never mix single and double quotes in the same file when defining String literals. Prefer single over double quotes for String literals. Never use a slash to create a new line in a string, because this will result in a `SyntaxError` if there are any whitespace characters after the slash.
 
 ```js
 // bad
@@ -301,7 +301,7 @@ var templ = '<div class="helper"></div>';
 ```
 
 ### Numbers
-Never use octal literals, leading decimals or hanging decimals.
+Never use octal literals, leading decimals, or hanging decimals.
 
 ```js
 // bad
@@ -414,11 +414,11 @@ for (var prop in obj) {
 // good
 var obj = {
 	one: 1,
-    isTwo: function (num) {
-    	return (num === 2);
-    },
-    three: 3,
-    four: 4
+	isTwo: function (num) {
+		return (num === 2);
+	},
+	three: 3,
+	four: 4
 };
 
 // bad - all on same line, no semicolon, quoted property name
@@ -426,7 +426,7 @@ var obj = { one: 1, 'two': 2 }
 ```
 
 ### Literals vs. Constructors
-Use literals and native coersion instead of native Object contructors. Basically, never use the native Object constructors. An exeption to this can be `RegExp` because sometimes it is necessary in order to dynamically create regular expressions at runtime. One main reason for this is that `typeof 'test' === 'string'`, but `typeof new String('test') === 'object'`.
+Use literals and native coersion instead of native Object contructors. Basically, never use the native Object constructors. One main reason for this is that `typeof 'test' === 'string'`, but `typeof new String('test') === 'object'`. An exeption to this is `RegExp` because sometimes it is necessary in order to dynamically create string based regular expressions at runtime.
 
 ```js
 var obj = new Object(); // bad
