@@ -1,0 +1,20 @@
+{
+  "name": "js-style-guide",
+  "version": "0.0.1",
+  "description": "Javascript Style Guide",
+  "scripts": {
+    "test": "grunt pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kavun/js-style-guide.git"
+  },
+  "author": "Kevin Reed",
+  "license": "MIT",
+  "gitHead": "a583d7e2576ba88ca9711c45c88dfb6465bb8280",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-markdown-pdf": "~1.0.0"
+  }
+}
